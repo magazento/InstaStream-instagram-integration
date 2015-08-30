@@ -3,7 +3,6 @@
 <p><strong><span style="color: #ff6600; font-size: medium;">Compatibility:</span></strong><br />- Magento&trade; CE 1.4.x, 1.5.x, 1.6.x, 1.7.x<br />- Magento&trade; EE 1.8.x, 1.9.x, 1.10.x, 1.11.x, 1.12.x<br />- No Magento&trade; patching required, no core files modifications</p>
 <p><strong><span style="font-size: medium; color: #ff6600;">Features:</span></strong><br />- Free support guarantee <br />- Free upgrades guarantee <br />- Easy to install, easy to upgrade, just copy to use <br />- User-friendly and flexible configuration <br />- Easy customizable - no coding!<br />- 100% open-source</p>
 <p><span style="font-size: medium;"><strong><span style="color: #ff6600;">Installation:</span></strong></span><br />- Easy integration, no installation or setup is necessary on the server. All you have to do is upload your files</p>
-<p><strong><span style="color: #ff6600; font-size: medium;">Support:</span></strong><br />- Email support for our clients <br />- Free upgrades at least in current version branch <br />- Free high priority technical support</p>
 
 <p>&nbsp;</p>
 <p><img src="http://magazento.com/promo/instagram/Screenshot-1.png" alt="" width="900" /></p>
