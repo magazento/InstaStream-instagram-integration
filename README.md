@@ -1,0 +1,18 @@
+<p>You&rsquo;ve already integrated your store with Facebook and Twitter &ndash; now is time for Instagram! <br />Create one or more landing pages or add photo stream to particular pages,categories or products, each with its own Instagram photo stream filtered by @user or #tag. Choose different size, background, simple border or no for each photo stream to make it look exactly you want! Create streams based on @user or choose one of the tags like #magento, #website or #world that come within the extension. <br />Extension allows you to automatize whole process, so you'll never have to deal with the repeatable process ever again. Create photo streamб assign it and you're done! Here's what it allows you to do, plus more:</p>
+<p><br /><span style="color: #ff6600;"><strong><span style="font-size: medium;">Features:</span></strong></span><br />- Support filter by @user or #tag <br />- Specify items count<br />- Easily imlement InstaStream in every part of your magneto store!<br />-- Categories<br /> -- Pages<br /> -- Products<br /> -- Static blocks - widget {{block type="instagram/userrecent" instagram_item_id="48"}}, where 48 is ID of your photo stream<br />- 4 different sizes (Tiny,Small,Normal,Big)<br />- Additional content, Top and Bottom<br />- All design setting in editable for each item<br /> -- borders<br /> -- backgrounds and background images<br /> -- color for text and borders<br /> -- and more.. <br />- Enable(or disable) scrollbars, especially if your stream contains big about of photos.<br />- Show or hide comments,likes,timestamps and comments</p>
+<p><strong><span style="color: #ff6600; font-size: medium;">Compatibility:</span></strong><br />- Magento&trade; CE 1.4.x, 1.5.x, 1.6.x, 1.7.x<br />- Magento&trade; EE 1.8.x, 1.9.x, 1.10.x, 1.11.x, 1.12.x<br />- No Magento&trade; patching required, no core files modifications</p>
+<p><strong><span style="font-size: medium; color: #ff6600;">Features:</span></strong><br />- Free support guarantee <br />- Free upgrades guarantee <br />- Easy to install, easy to upgrade, just copy to use <br />- User-friendly and flexible configuration <br />- Easy customizable - no coding!<br />- 100% open-source</p>
+<p><span style="font-size: medium;"><strong><span style="color: #ff6600;">Installation:</span></strong></span><br />- Easy integration, no installation or setup is necessary on the server. All you have to do is upload your files</p>
+<p><strong><span style="color: #ff6600; font-size: medium;">Support:</span></strong><br />- Email support for our clients <br />- Free upgrades at least in current version branch <br />- Free high priority technical support</p>
+
+<p>&nbsp;</p>
+<p><img src="http://magazento.com/promo/instagram/Screenshot-1.png" alt="" width="900" /></p>
+<p><img src="http://magazento.com/promo/instagram/Screenshot-2.png" alt="" width="900" /></p>
+<p><img src="http://magazento.com/promo/instagram/Screenshot-3.png" alt="" width="900" /></p>
+<p><img src="http://magazento.com/promo/instagram/Screenshot-4.png" alt="" width="900" /></p>
+<p><img src="http://magazento.com/promo/instagram/Screenshot-5.png" alt="" width="900" /></p>
+<p><img src="http://magazento.com/promo/instagram/Screenshot-6.png" alt="" width="900" /></p>
+<p><img src="http://magazento.com/promo/instagram/Screenshot-7.png" alt="" width="900" /></p>
+<p><img src="http://magazento.com/promo/instagram/Screenshot-8.png" alt="" width="900" /></p>
+<p><img src="http://magazento.com/promo/instagram/Screenshot-9.png" alt="" width="900" /></p>
+<p><img src="http://magazento.com/promo/instagram/Screenshot-10.png" alt="" width="900" /></p>
