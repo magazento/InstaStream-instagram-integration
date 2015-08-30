@@ -1,0 +1,8 @@
+<?php 
+    $items = explode(',',$this->getData('instagram_id'));
+    foreach ($items as $id) {
+        $this->getChild('user_recent')->setData('instagram_item_id', $id);
+        echo $this->getChildHtml('user_recent',false); 
+    }
+    
+?>

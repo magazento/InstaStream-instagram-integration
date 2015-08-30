@@ -1,0 +1,165 @@
+<?php 
+$uid = rand(11111, 999999); 
+$item_id = $this->getData('instagram_item_id');
+$data = $this->load($item_id);
+$model = $data['model'];
+$request = $data['request'];
+if ($request) :
+?>
+        <?php 
+            $heightStyle = "";
+            if ($model->getHeight()) $heightStyle = '
+                style="overflow:auto !important; 
+                height:'.$model->getHeight().'!important"';
+        ?>
+        <style type="text/css" media="screen">
+                
+                .pixed-instagram-liked-recent-<?php echo $model->getId(); ?> {
+
+                }
+
+                .pixed-instagram-liked-recent-<?php echo $model->getId(); ?> .pinst-container {
+                        background-color: <?php echo $model->getData('container_background_color') ?>;
+                        border: 1px solid <?php echo $model->getData('container_border_color') ?>;
+                        padding: <?php echo $model->getData('container_padding') ?>;
+                        border-radius:<?php echo $model->getData('container_border_radius'); ?>;
+                }
+
+                .pixed-instagram-liked-recent-<?php echo $model->getId(); ?> .pinst-item {
+                        margin: <?php echo $model->getData('item_spacing') ?>;
+                        background-color: <?php echo $model->getData('item_background_color') ?>;
+                        border-radius:<?php echo $model->getData('item_border_radius'); ?>;
+                }
+
+                .pixed-instagram-liked-recent-<?php echo $model->getId(); ?> .pinst-meta {
+                        background-color: <?php echo $model->getData('meta_background_color') ?>;
+                        color: <?php echo $model->getData('meta_text_color') ?>;
+                }
+
+                .pixed-instagram-liked-recent-<?php echo $model->getId(); ?> .pinst-link-icon a {
+                        color: <?php echo $model->getData('meta_text_color') ?>;
+                }
+
+                .pixed-instagram-liked-recent-<?php echo $model->getId(); ?> .pinst-likes-icon {
+                        color: <?php echo $model->getData('meta_comments_icon_color') ?>;
+                }
+
+                .pixed-instagram-liked-recent-<?php echo $model->getId(); ?> .pinst-comments-icon {
+                        color: <?php echo $model->getData('meta_comments_icon_color') ?>;
+                }
+
+                .pixed-instagram-liked-recent-<?php echo $model->getId(); ?> .pinst-timestamp-icon {
+                        color: <?php echo $model->getData('meta_timestamp_icon_color') ?>;
+                }
+
+                .pixed-instagram-liked-recent-<?php echo $model->getId(); ?> .pinst-comments-item {
+                        border-top: 1px solid <?php echo $model->getData('comments_border_color') ?>;
+                        color: <?php echo $model->getData('comments_text_color') ?>;
+                }
+
+                .pixed-instagram-liked-recent-<?php echo $model->getId(); ?> .pinst-caption {
+                        color: <?php echo $model->getData('caption_color') ?>;
+                }
+
+        </style>
+
+        <p class="instagram-content-top">
+            <?php 
+		$helper = Mage::helper('cms');
+		$processor = $helper->getPageTemplateProcessor();	            
+                echo $processor->filter($model->getData('content_top')); 
+            ?>
+        </p>
+        <p>
+        <div <?php echo $heightStyle; ?> class="pixed-instagram pixed-instagram-liked-recent-<?php echo $model->getId(); ?>">
+            <div class="masonry-<?php echo $uid ?> pinst-container <?php echo $model->getData('container_background_image') ?>  <?php echo $model->getData('container_border_radius') ?>">
+                        <?php foreach ($request->data as $item): ?>
+                                <div class="pinst-item <?php echo $model->getData('item_background_image'); ?> pinst-size-<?php echo $model->getData('item_size'); ?>">
+                                        <div class="pinst-img" style="background-image: url('<?php echo $item->images->low_resolution->url ?>')">
+                                                <?php if ($model->getData('links') == 1): ?>
+                                                        <a href="<?php echo $item->link ?>" target="_blank" rel="nofollow">&nbsp;</a>
+                                                <?php endif ?>
+                                        </div>
+
+                                        <?php if ($model->getData('caption_enabled') == 1 && $item->caption != null): ?>
+                                                <div class="pinst-caption">
+                                                    <?php echo $item->caption->text ?>
+                                                </div>
+                                        <?php endif ?>
+
+                                        <?php if ($model->getData('comments_enabled') == 1 && count($item->comments->data) > 0): ?>
+                                                <div class="pinst-comments">
+                                                        <?php $cc = 0; ?>
+                                                        <?php foreach ($item->comments->data as $comment): ?>
+                                                                <div class="pinst-comments-item">
+                                                                        <?php if ($model->getData('comments_user_images') == 1): ?>
+                                                                                <div class="pinst-comments-img">
+                                                                                        <img src="<?php echo $comment->from->profile_picture ?>" alt="@<?php echo $comment->from->username ?>" />
+                                                                                </div>
+                                                                        <?php endif ?>
+
+                                                                        <div class="pinst-comments-text <?php if ($model->getData('comments_user_images') != 1) echo 'no-margin' ?>">
+                                                                                <strong>@<?php echo $comment->from->username ?></strong><br />
+                                                                                <?php echo $comment->text ?>
+                                                                        </div>
+                                                                </div>
+                                                        <?php if($cc == 4) break; else $cc++; endforeach ?>
+                                                </div>
+                                        <?php endif ?>
+
+                                        <?php if ($model->getData('meta_enabled') == 1): ?>
+                                                <div class="pinst-meta <?php echo $model->getData('item_bg') ?>">
+                                                        <?php if ($model->getData('meta_likes_enabled') == 1): ?>
+                                                                <span class="pinst-likes-icon"><i class="icon-heart"></i></span>
+                                                                <?php echo $item->likes->count; ?>&nbsp;&nbsp;
+                                                        <?php endif ?>
+
+                                                        <?php if ($model->getData('meta_comments_enabled') == 1): ?>
+                                                                <span class="pinst-comments-icon"><i class="icon-comments"></i></span>
+                                                                <?php echo $item->comments->count; ?>&nbsp;&nbsp;
+                                                        <?php endif ?>
+
+                                                        <?php if ($model->getData('meta_timestamp_enabled') == 1): ?>
+                                                                <span class="pinst-timestamp-icon"><i class="icon-time"></i></span>
+                                                                <?php echo Mage::helper('instagram')->ago($item->created_time);  ?>&nbsp;&nbsp;
+                                                        <?php endif ?>
+
+                                                        <?php if ($model->getData('links') == 1): ?>
+                                                                <span class="pinst-link-icon"><a href="<?php echo $item->link ?>" target="_blank" rel="nofollow"><i class="icon-link"></i></a></span>
+                                                        <?php endif ?>
+                                                </div>
+                                        <?php endif ?>
+                                </div>
+                        <?php endforeach; ?>
+                </div>
+        </div>
+        </p>
+        <p class="instagram-content-bottom">
+            <?php 
+                echo $processor->filter($model->getData('content_bottom')); 
+            ?>
+        </p>        
+
+<?php endif; ?>   
+            
+<script type="text/javascript">
+    jQmagazento(document).ready(function() {
+            <?php if (!$model->getHeight()): ?>
+                var $container = jQmagazento('.masonry-<?php echo $uid ?>');
+                $container.imagesLoaded( function(){
+                        $container.masonry({
+                                itemSelector: '.pinst-item',
+                                isFitWidth: false,
+                                isAnimated: true,
+                                animationOptions: {
+                                    duration: 400,
+                                    easing: 'linear',
+                                    queue: false
+                                }
+                        });
+                });
+            <?php else:?>    
+                jQmagazento('.pixed-instagram-liked-recent-<?php echo $model->getId(); ?>').jScrollPane();
+            <?php endif;?>            
+    });
+</script>

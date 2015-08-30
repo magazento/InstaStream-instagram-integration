@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>magazento_instagram/css/pinst.css</stylesheet></action>
+            <action method="addCss"><stylesheet>magazento_instagram/css/jquery.jscrollpane.css</stylesheet></action>
+        </reference>
+        <reference name="after_body_start">
+            <block type="core/template" name="instagram_create" before="-" template="magazento_instagram/create.phtml"/>
+        </reference>        
+    </default>
+    
+
+
+</layout>
+
+
+
+
+

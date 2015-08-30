@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <magazento translate="label">
+            <label>Magazento.com</label>
+            <sort_order>250</sort_order>
+        </magazento>
+    </tabs>
+    <sections>
+        <instagram translate="label" module="instagram">
+            <label>InstaStream - Instagram integration</label>
+            <tab>magazento</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <jquery translate="label">
+                            <label>Include jQuery library</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </jquery>
+                        <clientid translate="label">
+                            <label>Client ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[
+                            To get Client ID you will need to register a new client </b> 
+                            ]]></comment>                            
+                        </clientid>    
+                    </fields>
+                </general>
+                <developer>
+                    <frontend_model>instagram/connect</frontend_model>
+                    <sort_order>333</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </developer>    
+                <info translate="label">
+                    <label>Instagram</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>instagram/info</frontend_model>
+                    <sort_order>500</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </info>                            
+            </groups>
+        </instagram>
+    </sections>
+</config>
